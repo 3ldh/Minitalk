@@ -5,7 +5,7 @@
 ## Login   <sauvau_m@epitech.net>
 ##
 ## Started on  Mon Feb  1 17:55:34 2016 Mathieu Sauvau
-## Last update Mon Feb  1 19:02:49 2016 Mathieu Sauvau
+## Last update Mon Feb  1 21:54:34 2016 Mathieu Sauvau
 ##
 
 CFLAGS += -W -Wall -Wextra
@@ -31,13 +31,13 @@ OBJ_C = $(SRC_CLIENT:.c=.o)
 
 OBJ_S = $(SRC_SERVER:.c=.o)
 
+$(SERVER) : $(OBJ_S) $(CLIENT)
+	gcc $(OBJ_S) -o $(SERVER_PATH)$(SERVER)
+
 $(CLIENT) : $(OBJ_C)
 	gcc $(OBJ_C) -o $(CLIENT_PATH)$(CLIENT)
 
-$(SERVER) : $(OBJ_S)
-	gcc $(OBJ_S) -o $(SERVER_PATH)$(SERVER)
-
-all: $(CLIENT) $(SERVER)
+all: $(CLIENT)
 
 clean:
 	rm -f $(OBJ_C) $(OBJ_S)

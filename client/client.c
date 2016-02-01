@@ -5,7 +5,7 @@
 ** Login   <sauvau_m@epitech.net>
 **
 ** Started on  Mon Feb  1 18:00:12 2016 Mathieu Sauvau
-** Last update Mon Feb  1 21:17:09 2016 Mathieu Sauvau
+** Last update Mon Feb  1 21:29:42 2016 Mathieu Sauvau
 */
 
 #include <signal.h>
@@ -40,7 +40,7 @@ void	convert_to_bin(int pid, char c)
 
 void	do_(int pid, char *str)
 {
-  while(*str)
+  while (*str)
     convert_to_bin(pid, *str++);
   convert_to_bin(pid, *str);
 }

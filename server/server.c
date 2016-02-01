@@ -5,7 +5,7 @@
 ** Login   <sauvau_m@epitech.net>
 **
 ** Started on  Mon Feb  1 18:16:12 2016 Mathieu Sauvau
-** Last update Mon Feb  1 21:15:10 2016 Mathieu Sauvau
+** Last update Mon Feb  1 21:33:34 2016 Mathieu Sauvau
 */
 
 #include <signal.h>
@@ -26,16 +26,17 @@ void		convert_to_char(int sig)
     }
 }
 
-void	handle_sig(int sig)
+void		handle_sig(int sig)
 {
   (sig == SIGUSR1) ? convert_to_char(0) : convert_to_char(1);
 }
 
-int	main(int ac, char **av)
+int		main()
 {
   my_put_nbr(getpid());
   my_putchar(1, '\n');
-  if (signal(SIGUSR1, handle_sig) == SIG_ERR || signal(SIGUSR2, handle_sig) == SIG_ERR)
+  if (signal(SIGUSR1, handle_sig) == SIG_ERR
+      || signal(SIGUSR2, handle_sig) == SIG_ERR)
     my_putstr(2, "signal error\n");
   while (42)
     pause();
