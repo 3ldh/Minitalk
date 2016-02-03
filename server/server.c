@@ -5,7 +5,7 @@
 ** Login   <sauvau_m@epitech.net>
 **
 ** Started on  Mon Feb  1 18:16:12 2016 Mathieu Sauvau
-** Last update Mon Feb  1 21:33:34 2016 Mathieu Sauvau
+** Last update Wed Feb  3 14:16:28 2016 Mathieu Sauvau
 */
 
 #include <signal.h>
@@ -38,7 +38,6 @@ int		main()
   if (signal(SIGUSR1, handle_sig) == SIG_ERR
       || signal(SIGUSR2, handle_sig) == SIG_ERR)
     my_putstr(2, "signal error\n");
-  while (42)
-    pause();
+  while (42);
   return (0);
 }

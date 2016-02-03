@@ -5,7 +5,7 @@
 ## Login   <sauvau_m@epitech.net>
 ##
 ## Started on  Mon Feb  1 17:55:34 2016 Mathieu Sauvau
-## Last update Mon Feb  1 21:54:34 2016 Mathieu Sauvau
+## Last update Wed Feb  3 14:13:06 2016 Mathieu Sauvau
 ##
 
 CFLAGS += -W -Wall -Wextra
@@ -37,7 +37,7 @@ $(SERVER) : $(OBJ_S) $(CLIENT)
 $(CLIENT) : $(OBJ_C)
 	gcc $(OBJ_C) -o $(CLIENT_PATH)$(CLIENT)
 
-all: $(CLIENT)
+all: $(SERVER)
 
 clean:
 	rm -f $(OBJ_C) $(OBJ_S)

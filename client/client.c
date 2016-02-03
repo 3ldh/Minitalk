@@ -5,7 +5,7 @@
 ** Login   <sauvau_m@epitech.net>
 **
 ** Started on  Mon Feb  1 18:00:12 2016 Mathieu Sauvau
-** Last update Mon Feb  1 21:29:42 2016 Mathieu Sauvau
+** Last update Wed Feb  3 14:16:47 2016 Mathieu Sauvau
 */
 
 #include <signal.h>
@@ -33,7 +33,7 @@ void	convert_to_bin(int pid, char c)
   i = 0;
   while (i < 8)
     {
-      usleep(1000);
+      usleep(150);
       send_(pid, 1 & (c >> i++));
     }
 }
