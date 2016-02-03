@@ -5,7 +5,7 @@
 ** Login   <sauvau_m@epitech.net>
 **
 ** Started on  Mon Feb  1 18:00:12 2016 Mathieu Sauvau
-** Last update Wed Feb  3 14:16:47 2016 Mathieu Sauvau
+** Last update Wed Feb  3 14:39:28 2016 Mathieu Sauvau
 */
 
 #include <signal.h>
@@ -47,11 +47,19 @@ void	do_(int pid, char *str)
 
 int	main(int ac, char **av)
 {
+  int	pid;
+
   if (ac != 3)
     {
       my_putstr(2, "Usage : [Server PID] [String]\n");
       return (1);
     }
-  do_(my_getnbr(av[1]), av[2]);
+  pid = my_getnbr(av[1]);
+  if (pid <= 0)
+    {
+      my_putstr(2, "Server PID must be positive\n");
+      return (1);
+    }
+  do_(pid, av[2]);
   return (0);
 }
