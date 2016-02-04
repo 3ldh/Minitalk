@@ -5,7 +5,7 @@
 ## Login   <sauvau_m@epitech.net>
 ##
 ## Started on  Mon Feb  1 17:55:34 2016 Mathieu Sauvau
-## Last update Thu Feb  4 18:17:58 2016 Mathieu Sauvau
+## Last update Thu Feb  4 19:35:25 2016 Mathieu Sauvau
 ##
 
 CFLAGS += -W -Wall -Wextra
@@ -19,18 +19,20 @@ CLIENT_PATH = ./client/
 
 SERVER_PATH = ./server/
 
+UTILITIES = ./utilities/
+
 SRC_CLIENT =	$(CLIENT_PATH)client.c \
 		$(CLIENT_PATH)convertion.c \
-		my_getnbr.c \
-		function.c \
-		itoa.c \
-		my_revstr.c \
+		$(UTILITIES)my_getnbr.c \
+		$(UTILITIES)function.c \
+		$(UTILITIES)itoa.c \
+		$(UTILITIES)my_revstr.c
 
 SRC_SERVER =	$(SERVER_PATH)server.c \
-		my_put_nbr.c \
-		function.c \
-		my_getnbr.c \
-		my_strcat.c
+		$(UTILITIES)my_put_nbr.c \
+		$(UTILITIES)function.c \
+		$(UTILITIES)my_getnbr.c \
+		$(UTILITIES)my_strcat.c
 
 OBJ_C = $(SRC_CLIENT:.c=.o)
 
